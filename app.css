@@ -1,0 +1,102 @@
+
+/* lotto-table */
+
+.lotto-grid .brand > .row {
+  margin-bottom: 5px;
+  background: #f3f7fc;
+}
+
+.lotto-grid .brand > .row > [class^="col-"] {
+  height: 80px;
+}
+
+.lotto-grid,
+.lotto-table,
+.lotto-table th {
+  text-align: center;
+}
+
+.lotto-table > thead > tr > th {
+  border-bottom-width: 0px;
+      font-size: 20px;
+    font-weight: inherit;
+}
+
+/*.brand,*/
+.lotto-table td {
+  background-color: #f3f7fc;
+}
+
+.lotto-table > tbody > tr > td {
+  border-top: 5px solid white;
+  vertical-align: middle;
+}
+
+.lotto-table span {
+  background-color: yellow;
+  padding: 5px;
+  border-radius: 20px;
+  margin-right: 2px;  
+}
+
+.lotto-grid span.regular,
+.lotto-table span.regular {
+  background-color: #fede86;
+}
+
+.lotto-grid span.strong,
+.lotto-table span.strong {
+  background-color: #e35f64;
+}
+
+.lotto-grid span.regular,
+.lotto-grid span.strong,
+.lotto-table span.regular,
+.lotto-table span.strong {
+  display: inline-block;
+  padding: 5px;
+  min-width: 30px;
+  border-radius: 20px;
+  margin-right: 2px; 
+}
+
+.lotto-grid .btn,
+.lotto-table .btn {
+  border-radius: 0px;
+}
+
+.lotto-table tbody tr td:nth-child(3) {
+  color: #5596ff;
+  /*font-weight: bold;  */
+  font-size: 25px;
+}
+
+.lotto-grid a,
+.lotto-table a {
+  width: 140px;
+  height: 65px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+}
+
+
+.lotto-grid a > img,
+.lotto-table a > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 50px;
+}
+
+
+.lotto-table tbody tr td:nth-child(2) {
+/*.lucky-numbers {*/
+  min-width: 240px;
+}

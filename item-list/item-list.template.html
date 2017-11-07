@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+
+      <h1>My Lotto Widget</h1>
+
+      <div class="table-responsive"> 
+        <table class="table lotto-table">
+          <thead> 
+            <tr> 
+              <th>Brand</th>
+              <th>Your Lucky Numbers</th>
+              <th>Prize</th>
+              <th>Visit Site</th>
+            </tr>
+          </thead> 
+          <tbody>
+            <tr ng-repeat="item in $ctrl.items"> 
+              <td>
+                <a href="{{item.play_link}}">
+                  <img ng-src="{{item.lottery_logo}}" alt="{{item.lottery_name}}" />
+                </a>                
+              </td> 
+              <td>
+                <span ng-repeat="ball in item.balls[0]" class="regular">
+                  {{ball.value}}
+                </span>
+                <span 
+                ng-repeat="ball in item.balls[1]" class="strong">
+                  {{ball.value}}                
+                </span>
+              </td>
+              <td>{{item.next_draw_jackpot}}</td> 
+              <td><button type="button" class="btn btn-primary" ng-click="$ctrl.play($index)">Play Now</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      
+
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div class="container-fluid">
+
+  <div class="row lotto-grid">
+    <div class="row">
+      <div class="col-md-3 hidden-sm">Brand</div>
+      <div class="col-md-3 hidden-sm">Your Lucky Numbers</div>
+      <div class="col-md-3 hidden-sm">Prize</div>
+      <div class="col-md-3 hidden-sm">Visit Site</div>
+    </div>
+    <div class="row brand" ng-repeat="item in $ctrl.items">
+      <div class="row">
+        <div class="col-md-3 col-sm-4">
+          <a href="{{item.play_link}}">
+            <img ng-src="{{item.lottery_logo}}" alt="{{item.lottery_name}}" />
+          </a>
+        </div>
+        <div class="col-md-3 hidden-sm">
+          <span ng-repeat="ball in item.balls[0]" class="regular">
+            {{ball.value}}
+          </span>
+          <span 
+          ng-repeat="ball in item.balls[1]" class="strong">
+          {{ball.value}}                
+        </span>
+      </div>
+      <div class="col-md-3 col-sm-4">{{item.next_draw_jackpot}}</div>
+      <div class="col-md-3 col-sm-4">
+        <button 
+        type="button"
+        class="btn btn-primary"
+        ng-click="$ctrl.play($index)">Play Now</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 visible-sm-block"><span ng-repeat="ball in item.balls[0]" class="regular">
+        {{ball.value}}
+      </span>
+      <span 
+      ng-repeat="ball in item.balls[1]" class="strong">
+      {{ball.value}}                
+    </span></div>
+  </div>
+</div>
+</div>
+
+</div> -->
